@@ -15,6 +15,6 @@ export class UsuariosService {
   // Creamos evento para recuperar el get de los usuarios
   cargarUsuarios() {
     const url = "https://reqres.in/api/users";
-    this.http.get(url);
+    return this.http.get(url);
   }
 }
