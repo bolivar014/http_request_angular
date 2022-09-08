@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 // Importamos httpclient
 import { HttpClient } from '@angular/common/http';
+import { ReqRespResponse } from '../models/request-respons';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,6 @@ export class UsuariosService {
   // Creamos evento para recuperar el get de los usuarios
   cargarUsuarios() {
     const url = "https://reqres.in/api/users";
-    return this.http.get(url);
+    return this.http.get<ReqRespResponse>(url);
   }
 }
