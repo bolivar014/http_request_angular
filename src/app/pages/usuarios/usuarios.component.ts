@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+// Importamos servicio usuario
+import { UsuariosService } from 'src/app/services/usuarios.service'; 
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsuariosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usuariosService: UsuariosService ) { }
 
   ngOnInit(): void {
   }
