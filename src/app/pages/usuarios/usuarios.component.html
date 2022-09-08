@@ -13,10 +13,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Avatar</td>
-                    <td>Camilo V.</td>
-                    <td>bolivar014@gmail.com</td>
+                <tr *ngFor="let usuario of usuarios">
+                    <td>
+                        <img [src]="usuario.Avatar" alt="">
+                    </td>
+                    <td>{{ usuario.first_name }}</td>
+                    <td>{{ usuario.email }}</td>
                 </tr>
             </tbody>
         </table>

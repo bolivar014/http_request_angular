@@ -10,7 +10,8 @@ import { ReqRespResponse } from 'src/app/models/request-respons';
   styleUrls: ['./usuarios.component.css']
 })
 export class UsuariosComponent implements OnInit {
-
+  public usuarios: any = [];
+  
   constructor(private usuariosService: UsuariosService ) { }
 
   ngOnInit(): void {
@@ -19,6 +20,9 @@ export class UsuariosComponent implements OnInit {
     .subscribe( resp => {
       // Nos subscribimos a la respuesta de lo que se esta recibiendo desde la función cargarUsuarios
       console.log(resp.data[0].first_name);
+      
+      // Obtengo los datos existentes de usuarios
+      this.usuarios = resp.data;
     })
   }
 
