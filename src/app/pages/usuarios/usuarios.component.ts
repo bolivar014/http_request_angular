@@ -17,12 +17,12 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
     // Invocamos evento CargarUsuarios 
     this.usuariosService.cargarUsuarios()
-    .subscribe( resp => {
+    .subscribe( usuarios => {
       // Nos subscribimos a la respuesta de lo que se esta recibiendo desde la función cargarUsuarios
-      console.log(resp.data[0].first_name);
+      console.log(usuarios);
       
       // Obtengo los datos existentes de usuarios
-      this.usuarios = resp.data;
+      this.usuarios = usuarios;
     })
   }
 

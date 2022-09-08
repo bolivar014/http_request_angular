@@ -1,3 +1,5 @@
+import { Usuario } from "./usuario";
+
 export interface ReqRespResponse {
     page:        number;
     per_page:    number;
